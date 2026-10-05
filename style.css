@@ -1,4 +1,6 @@
-/* Задание 2: оформление страницы (шапка, меню, контент, подвал) */
+/* Задание 3: адаптивная верстка — Mobile First, Flex Box + Media Query */
+
+/* ===== Базовые правила: смартфоны (Mobile First) ===== */
 
 body {
   margin: 0;
@@ -8,73 +10,83 @@ body {
 }
 
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 16px;
+  width: 100%;
+  padding: 0 12px;
+  box-sizing: border-box;
 }
 
 /* Шапка сайта */
 #site-header {
   background: #2b5f8a;
   color: #fff;
-  padding: 16px 0;
+  padding: 12px 0;
 }
 
 .header-inner {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   object-fit: cover;
   border: 2px solid #fff;
   border-radius: 50%;
-  margin-right: 16px;
+  margin-right: 12px;
 }
 
 .site-name {
   margin: 0;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
 }
 
-/* Меню со ссылками */
+/* Меню: на смартфоне — вертикальный список на всю ширину */
 #main-menu {
   background: #20476b;
 }
 
 #main-menu ul {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 #main-menu li {
-  display: inline-block;
+  width: 100%;
 }
 
 #main-menu a {
   display: block;
-  padding: 12px 18px;
+  padding: 12px 16px;
   color: #fff;
   text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 #main-menu a:hover {
   background: #2b5f8a;
 }
 
-/* Контент страницы */
+/* Контент: Flex Box, чтобы на смартфоне поднять таблицу над списком ссылок */
 .content {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 8px;
+}
+
+#table {
+  order: -1;
 }
 
 .card {
   background: #fff;
-  margin: 20px 0;
-  padding: 20px 24px;
+  margin: 12px 0;
+  padding: 16px;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
@@ -130,6 +142,7 @@ body {
   margin: 4px 0 12px;
   padding: 6px 8px;
   font: inherit;
+  box-sizing: border-box;
 }
 
 .feedback-form textarea {
@@ -141,9 +154,58 @@ body {
   background: #20476b;
   color: #fff;
   padding: 16px 0;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 #site-footer p {
   margin: 0;
+}
+
+/* ===== Планшеты и десктоп: страница как в задании 2 ===== */
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  #site-header {
+    padding: 16px 0;
+  }
+
+  .logo {
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
+  }
+
+  .site-name {
+    font-size: 24px;
+  }
+
+  #main-menu ul {
+    flex-direction: row;
+  }
+
+  #main-menu li {
+    width: auto;
+  }
+
+  #main-menu a {
+    border-bottom: none;
+  }
+
+  #table {
+    order: 0;
+  }
+
+  .card {
+    margin: 20px 0;
+    padding: 20px 24px;
+  }
+
+  #site-footer {
+    margin-top: 20px;
+  }
 }
