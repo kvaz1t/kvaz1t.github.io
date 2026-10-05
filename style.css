@@ -1,0 +1,149 @@
+/* Задание 2: оформление страницы (шапка, меню, контент, подвал) */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Шапка сайта */
+#site-header {
+  background: #2b5f8a;
+  color: #fff;
+  padding: 16px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.site-name {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Меню со ссылками */
+#main-menu {
+  background: #20476b;
+}
+
+#main-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main-menu li {
+  display: inline-block;
+}
+
+#main-menu a {
+  display: block;
+  padding: 12px 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#main-menu a:hover {
+  background: #2b5f8a;
+}
+
+/* Контент страницы */
+.content {
+  padding-bottom: 8px;
+}
+
+.card {
+  background: #fff;
+  margin: 20px 0;
+  padding: 20px 24px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.link-image {
+  width: 200px;
+  max-width: 100%;
+}
+
+.map-image {
+  width: 400px;
+  max-width: 100%;
+}
+
+/* Таблица с чередованием фона строк */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #b8c6d4;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table thead th {
+  background: #2b5f8a;
+  color: #fff;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: #e9f0f7;
+}
+
+.data-table .group-row th {
+  background: #d7e3ef;
+  color: #20476b;
+}
+
+/* Форма */
+.feedback-form input[type="text"],
+.feedback-form input[type="tel"],
+.feedback-form input[type="email"],
+.feedback-form input[type="date"],
+.feedback-form select,
+.feedback-form textarea {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  margin: 4px 0 12px;
+  padding: 6px 8px;
+  font: inherit;
+}
+
+.feedback-form textarea {
+  height: 80px;
+}
+
+/* Подвал сайта */
+#site-footer {
+  background: #20476b;
+  color: #fff;
+  padding: 16px 0;
+  margin-top: 20px;
+}
+
+#site-footer p {
+  margin: 0;
+}
