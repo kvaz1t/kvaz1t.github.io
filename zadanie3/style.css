@@ -172,43 +172,32 @@ body {
   #site-header {
     padding: 16px 0;
   }
-
-  /* Шапка в одну строку: логотип слева, меню справа */
-  .header-inner {
-    flex-wrap: nowrap;          /* запрет переноса */
-    justify-content: space-between; /* логотип и название — слева, меню — справа */
-    align-items: center;
-  }
-
   .logo {
     width: 64px;
     height: 64px;
     margin-right: 16px;
-    flex-shrink: 0;
   }
   .site-name {
     font-size: 24px;
-    margin-right: auto;         /* отталкивает меню вправо */
   }
 
-  /* Меню в строку, прижато к правому краю */
-  #main-menu {
-    background: transparent;    /* убираем отдельный фон полосы */
+  /* Меню: пункты в строку и прижаты к правому краю */
+  #main-menu .container {
+    display: flex;
+    justify-content: flex-end;   /* ← прижимает всё содержимое вправо */
   }
   #main-menu ul {
     flex-direction: row;
-    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
   #main-menu li {
     width: auto;
   }
   #main-menu a {
     border-bottom: none;
-    padding: 8px 14px;
-    border-radius: 4px;
-  }
-  #main-menu a:hover {
-    background: #2b5f8a;
+    padding: 12px 16px;
   }
 
   #table {
@@ -218,7 +207,8 @@ body {
     margin: 20px 0;
     padding: 20px 24px;
   }
-  /* Подвал — текст по левому краю */
+
+  /* Подвал: текст по левому краю */
   #site-footer {
     margin-top: 20px;
     text-align: left;
