@@ -177,6 +177,14 @@ body {
     padding-left: 16px;
   }
   
+  /* Прижимаем содержимое подвала к левому краю */
+  #site-footer .container {
+    margin: 0;
+    max-width: 100%;
+    padding-left: 16px;
+    text-align: left;
+  }
+  
   #site-header {
     padding: 16px 0;
   }
@@ -214,13 +222,5 @@ body {
   .card {
     margin: 20px 0;
     padding: 20px 24px;
-  }
-  /* Подвал: текст по левому краю */
-  #site-footer {
-    margin-top: 20px;
-    text-align: left;
-  }
-  #site-footer .container {
-    text-align: left;
   }
 }
