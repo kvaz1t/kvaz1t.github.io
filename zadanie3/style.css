@@ -169,6 +169,14 @@ body {
     margin: 0 auto;
     padding: 0 16px;
   }
+  
+  /* Прижимаем содержимое шапки к левому краю */
+  #site-header .container {
+    margin: 0;
+    max-width: 100%;
+    padding-left: 16px;
+  }
+  
   #site-header {
     padding: 16px 0;
   }
@@ -180,11 +188,11 @@ body {
   .site-name {
     font-size: 24px;
   }
-
+  
   /* Меню: пункты в строку и прижаты к правому краю */
   #main-menu .container {
     display: flex;
-    justify-content: flex-end;   /* ← прижимает всё содержимое вправо */
+    justify-content: flex-end;
   }
   #main-menu ul {
     flex-direction: row;
@@ -199,7 +207,7 @@ body {
     border-bottom: none;
     padding: 12px 16px;
   }
-
+  
   #table {
     order: 0;
   }
@@ -207,7 +215,6 @@ body {
     margin: 20px 0;
     padding: 20px 24px;
   }
-
   /* Подвал: текст по левому краю */
   #site-footer {
     margin-top: 20px;
